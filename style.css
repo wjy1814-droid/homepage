@@ -1,155 +1,335 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>주남테크 | 경첩·철물 정밀 제조</title>
-<meta name="description" content="주남테크 - 걸이쇠, 백경첩, 스텐경첩, 용접경첩을 전문 생산하는 경첩·철물 제조기업">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+:root {
+  --blueprint: #10375C;
+  --blueprint-deep: #0A2540;
+  --blueprint-mid: #1B4B75;
+  --paper: #EDF2F7;
+  --paper-alt: #E1E8F0;
+  --paper-white: #FFFFFF;
+  --amber: #E8A33D;
+  --amber-deep: #C9821F;
+  --ink: #1A1D23;
+  --steel: #5C6672;
+  --line: #C7D2DE;
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-mark">JN</span>
-      <span class="logo-text">주남테크</span>
-    </a>
-    <nav class="main-nav">
-      <a href="#about">회사소개</a>
-      <a href="#services">제품군</a>
-    </nav>
-  </div>
-</header>
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'IBM Plex Sans KR', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
 
-<main id="top">
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="corner-frame">
-      <span class="corner tl"></span>
-      <span class="corner tr"></span>
-      <span class="corner bl"></span>
-      <span class="corner br"></span>
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  /* subtle blueprint grid texture instead of flat color */
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-attachment: fixed;
+}
 
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">PRECISION HINGE & HARDWARE MANUFACTURER</p>
-          <h1>작은 경첩 하나가<br>제품의 수명을 결정합니다.</h1>
-          <p class="hero-desc">
-            주남테크는 걸이쇠, 백경첩, 스텐경첩, 용접경첩 등
-            다양한 경첩·철물을 전문적으로 생산하는 제조기업입니다.
-            정밀한 가공과 엄격한 품질관리로 오래 쓸 수 있는 제품을 만듭니다.
-          </p>
-          <div class="hero-actions">
-            <a href="#about" class="btn btn-primary">문의하기</a>
-            <a href="#services" class="btn btn-ghost">제품군 보기</a>
-          </div>
-        </div>
-        <div class="hero-media">
-          <img src="images/hero.jpg" alt="주남테크 공장 전경" onerror="this.closest('.hero-media').classList.add('img-missing')">
-          <span class="media-tag">FIG. 01 — FACTORY</span>
-        </div>
-      </div>
-    </div>
-  </section>
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-family: var(--font-display); margin: 0; color: var(--blueprint-deep); }
 
-  <div class="dimension-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(237, 242, 247, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--blueprint-deep);
+}
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--blueprint-deep);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.main-nav { display: flex; gap: 28px; font-size: 0.95rem; font-weight: 500; }
+.main-nav a:hover { color: var(--amber); }
 
-  <!-- ABOUT -->
-  <section id="about" class="section about">
-    <div class="section-head">
-      <span class="spec-num">01</span>
-      <h2>회사소개</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-media">
-        <img src="images/about.jpg" alt="주남테크 작업 현장" onerror="this.closest('.about-media').classList.add('img-missing')">
-        <span class="media-tag">FIG. 02 — WORKSHOP</span>
-      </div>
-      <div class="about-copy">
-        <p>
-          주남테크는 걸이쇠, 백경첩, 스텐경첩, 용접경첩을 전문으로 생산하는
-          경첩·철물 제조기업입니다. 문과 가구, 산업 설비 등 다양한 곳에 쓰이는
-          경첩을 소재 선정부터 가공, 용접, 표면처리까지 자체 공정으로 관리합니다.
-        </p>
-        <p>
-          "작은 부품이 전체의 내구성을 좌우한다"는 원칙 아래, 원자재 검수부터
-          출고 전 최종 검사까지 전 과정에서 품질 기준을 지키고 있습니다.
-        </p>
-        <ul class="about-stats">
-          <li><strong>10+</strong><span>년간의 제조 경험</span></li>
-          <li><strong>300+</strong><span>거래처 네트워크</span></li>
-          <li><strong>99.8%</strong><span>납기 준수율</span></li>
-        </ul>
-        <ul class="contact-info">
-          <li><span class="label">주소</span><span>대구광역시 북구 노원로17길 38-15</span></li>
-          <li><span class="label">전화</span><span>053-000-0000</span></li>
-          <li><span class="label">이메일</span><span>wjy1814@naver.com</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+/* ---------- Hero (full-bleed) ---------- */
+.hero {
+  position: relative;
+  min-height: 74vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 24px;
+  background-image:
+    linear-gradient(135deg, rgba(10,37,64,0.93), rgba(16,55,92,0.72)),
+    url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.hero::before {
+  /* decorative blueprint grid overlay on top of hero background */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+.hero .corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2.5px solid var(--amber);
+  z-index: 2;
+}
+.hero .corner.tl { top: 28px; left: 28px; border-right: none; border-bottom: none; }
+.hero .corner.tr { top: 28px; right: 28px; border-left: none; border-bottom: none; }
 
-  <div class="dimension-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.hero h1 {
+  color: var(--paper-white);
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  line-height: 1.28;
+  margin-bottom: 22px;
+  max-width: 18ch;
+}
+.hero-desc {
+  color: rgba(237,242,247,0.85);
+  margin-bottom: 32px;
+  max-width: 46ch;
+  font-size: 1.02rem;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-  <!-- SERVICES -->
-  <section id="services" class="section services">
-    <div class="section-head">
-      <span class="spec-num">02</span>
-      <h2>제품군</h2>
-    </div>
-    <div class="service-grid">
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 2px;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--amber); color: var(--blueprint-deep); }
+.btn-primary:hover { background: var(--amber-deep); box-shadow: 0 8px 20px rgba(232,163,61,0.35); }
+.btn-ghost { border: 1.5px solid rgba(255,255,255,0.7); color: var(--paper-white); }
+.btn-ghost:hover { background: rgba(255,255,255,0.1); }
 
-      <article class="service-card">
-        <span class="card-code">PROD-01</span>
-        <div class="card-media">
-          <img src="images/product-1.png" alt="걸이쇠" onerror="this.closest('.card-media').classList.add('img-missing')">
-        </div>
-        <h3>걸이쇠</h3>
-        <p>다양한 규격과 하중에 맞춘 걸이쇠를 생산하며, 용도에 맞는 맞춤 제작도 가능합니다.</p>
-      </article>
+.media-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  z-index: 2;
+  background: rgba(10,37,64,0.75);
+  color: var(--paper-white);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  letter-spacing: 0.05em;
+}
 
-      <article class="service-card">
-        <span class="card-code">PROD-02</span>
-        <div class="card-media">
-          <img src="images/product-2.png" alt="백경첩" onerror="this.closest('.card-media').classList.add('img-missing')">
-        </div>
-        <h3>백경첩</h3>
-        <p>내구성과 개폐감을 고려한 백경첩으로, 문과 가구 등에 폭넓게 사용됩니다.</p>
-      </article>
+/* ---------- Stats band (full width) ---------- */
+.stats-band {
+  background: var(--blueprint-deep);
+  padding: 40px 24px;
+}
+.stats-band ul {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.stats-band li { display: flex; flex-direction: column; gap: 4px; }
+.stats-band strong {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  color: var(--amber);
+}
+.stats-band span { font-size: 0.85rem; color: rgba(237,242,247,0.8); }
 
-      <article class="service-card">
-        <span class="card-code">PROD-03</span>
-        <div class="card-media">
-          <img src="images/product-3.png" alt="스텐경첩" onerror="this.closest('.card-media').classList.add('img-missing')">
-        </div>
-        <h3>스텐경첩</h3>
-        <p>부식에 강한 스테인리스 소재로 제작해, 습기나 외부 환경에도 안정적입니다.</p>
-      </article>
+/* ---------- Section shared ---------- */
+.section {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 88px 24px;
+}
+.section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 40px; }
+.spec-num {
+  font-family: var(--font-mono);
+  color: var(--amber);
+  font-size: 1rem;
+  border: 1px solid var(--amber);
+  padding: 2px 8px;
+  background: var(--paper-white);
+}
+.section-head h2 { font-size: 1.9rem; }
 
-      <article class="service-card">
-        <span class="card-code">PROD-04</span>
-        <div class="card-media">
-          <img src="images/product-4.png" alt="용접경첩" onerror="this.closest('.card-media').classList.add('img-missing')">
-        </div>
-        <h3>용접경첩</h3>
-        <p>철제 구조물과 산업 설비에 적합하도록 용접 방식으로 결합력을 강화했습니다.</p>
-      </article>
+/* ---------- About ---------- */
+.about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: center; }
+.about-media { position: relative; box-shadow: 0 16px 40px rgba(10,37,64,0.15); }
+.about-media img, .about-media.img-missing {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--paper-white);
+  border: 1px solid var(--line);
+}
+.about-media.img-missing::before {
+  content: "이미지를 추가하세요 (about.jpg)";
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border: 1px dashed var(--line);
+  color: var(--steel);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 20px;
+}
+.about-copy p { color: var(--steel); margin: 0 0 16px; }
 
-    </div>
-  </section>
+.contact-info {
+  list-style: none;
+  padding: 20px 24px;
+  margin: 24px 0 0;
+  background: var(--paper-white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--amber);
+  box-shadow: 0 8px 24px rgba(10,37,64,0.06);
+}
+.contact-info li { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.contact-info li:last-child { border-bottom: none; }
+.contact-info .label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--amber-deep);
+  min-width: 56px;
+}
 
-  <div class="dimension-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+/* ---------- Services (tinted full-width band) ---------- */
+.services { max-width: none; padding: 0; background: var(--paper-alt); }
+.services-inner { max-width: 1160px; margin: 0 auto; padding: 88px 24px; }
 
-</main>
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.service-card {
+  background: var(--paper-white);
+  border: 1px solid var(--line);
+  padding: 22px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(10,37,64,0.12); }
+.card-code { font-family: var(--font-mono); font-size: 0.72rem; color: var(--amber-deep); letter-spacing: 0.05em; }
+.card-media { margin: 12px 0 16px; }
+.card-media img, .card-media.img-missing {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.card-media.img-missing::before {
+  content: "이미지 추가: product-N.png";
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border: 1px dashed var(--line);
+  color: var(--steel);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 16px;
+}
+.service-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.service-card p { color: var(--steel); font-size: 0.92rem; margin: 0; }
 
-<footer class="site-footer">
-  <p>&copy; 2026 주남테크. All rights reserved.</p>
-</footer>
+/* ---------- Footer ---------- */
+.site-footer { background: var(--blueprint-deep); color: rgba(237,242,247,0.85); }
+.footer-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 56px 24px 32px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+}
+.footer-brand { display: flex; flex-direction: column; gap: 8px; }
+.footer-brand .logo-mark { border-color: var(--amber); color: var(--amber); }
+.footer-brand .logo-text { font-family: var(--font-display); font-weight: 700; color: var(--paper-white); }
+.footer-brand p { color: rgba(237,242,247,0.65); font-size: 0.85rem; margin: 0; }
+.footer-col h4 { font-family: var(--font-mono); font-size: 0.8rem; color: var(--amber); margin: 0 0 14px; letter-spacing: 0.05em; }
+.footer-col a, .footer-col p { display: block; color: rgba(237,242,247,0.8); font-size: 0.9rem; margin: 0 0 8px; }
+.footer-col a:hover { color: var(--amber); }
+.footer-bottom {
+  border-top: 1px solid rgba(237,242,247,0.15);
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.8rem;
+  color: rgba(237,242,247,0.55);
+}
 
-<script src="js/script.js"></script>
-</body>
-</html>
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-band ul { grid-template-columns: repeat(2, 1fr); }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 60vh; padding: 56px 20px; }
+  .main-nav { gap: 16px; font-size: 0.85rem; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .stats-band ul { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn:hover, .service-card:hover { transform: none; }
+}

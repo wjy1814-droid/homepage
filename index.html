@@ -26,27 +26,141 @@
 
 <main id="top">
 
-  <!-- HERO -->
+  <!-- HERO (full-bleed background) -->
   <section class="hero">
-    <div class="corner-frame">
-      <span class="corner tl"></span>
-      <span class="corner tr"></span>
-      <span class="corner bl"></span>
-      <span class="corner br"></span>
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <div class="hero-inner">
+      <p class="eyebrow">PRECISION HINGE & HARDWARE MANUFACTURER</p>
+      <h1>작은 경첩 하나가<br>제품의 수명을 결정합니다.</h1>
+      <p class="hero-desc">
+        주남테크는 걸이쇠, 백경첩, 스텐경첩, 용접경첩 등
+        다양한 경첩·철물을 전문적으로 생산하는 제조기업입니다.
+        정밀한 가공과 엄격한 품질관리로 오래 쓸 수 있는 제품을 만듭니다.
+      </p>
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-primary">문의하기</a>
+        <a href="#services" class="btn btn-ghost">제품군 보기</a>
+      </div>
+    </div>
+    <span class="media-tag">FIG. 01 — FACTORY</span>
+  </section>
 
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">PRECISION HINGE & HARDWARE MANUFACTURER</p>
-          <h1>작은 경첩 하나가<br>제품의 수명을 결정합니다.</h1>
-          <p class="hero-desc">
-            주남테크는 걸이쇠, 백경첩, 스텐경첩, 용접경첩 등
-            다양한 경첩·철물을 전문적으로 생산하는 제조기업입니다.
-            정밀한 가공과 엄격한 품질관리로 오래 쓸 수 있는 제품을 만듭니다.
-          </p>
-          <div class="hero-actions">
-            <a href="#about" class="btn btn-primary">문의하기</a>
-            <a href="#services" class="btn btn-ghost">제품군 보기</a>
+  <!-- STATS BANNER -->
+  <section class="stats-band">
+    <ul>
+      <li><strong>10+</strong><span>년간의 제조 경험</span></li>
+      <li><strong>300+</strong><span>거래처 네트워크</span></li>
+      <li><strong>99.8%</strong><span>납기 준수율</span></li>
+      <li><strong>4</strong><span>주력 제품 라인업</span></li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="section-head">
+      <span class="spec-num">01</span>
+      <h2>회사소개</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-media">
+        <img src="about.jpg" alt="주남테크 작업 현장" onerror="this.closest('.about-media').classList.add('img-missing')">
+        <span class="media-tag">FIG. 02 — WORKSHOP</span>
+      </div>
+      <div class="about-copy">
+        <p>
+          주남테크는 걸이쇠, 백경첩, 스텐경첩, 용접경첩을 전문으로 생산하는
+          경첩·철물 제조기업입니다. 문과 가구, 산업 설비 등 다양한 곳에 쓰이는
+          경첩을 소재 선정부터 가공, 용접, 표면처리까지 자체 공정으로 관리합니다.
+        </p>
+        <p>
+          "작은 부품이 전체의 내구성을 좌우한다"는 원칙 아래, 원자재 검수부터
+          출고 전 최종 검사까지 전 과정에서 품질 기준을 지키고 있습니다.
+        </p>
+        <ul class="contact-info">
+          <li><span class="label">주소</span><span>대구광역시 북구 노원로17길 38-15</span></li>
+          <li><span class="label">전화</span><span>053-000-0000</span></li>
+          <li><span class="label">이메일</span><span>wjy1814@naver.com</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section services">
+    <div class="services-inner">
+      <div class="section-head">
+        <span class="spec-num">02</span>
+        <h2>제품군</h2>
+      </div>
+      <div class="service-grid">
+
+        <article class="service-card">
+          <span class="card-code">PROD-01</span>
+          <div class="card-media">
+            <img src="product-1.png" alt="걸이쇠" onerror="this.closest('.card-media').classList.add('img-missing')">
           </div>
-        </div>
-        <div class="hero-media">
-          <img src="hero.jpg" alt="주남테크 공장 전경"
+          <h3>걸이쇠</h3>
+          <p>다양한 규격과 하중에 맞춘 걸이쇠를 생산하며, 용도에 맞는 맞춤 제작도 가능합니다.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="card-code">PROD-02</span>
+          <div class="card-media">
+            <img src="product-2.png" alt="백경첩" onerror="this.closest('.card-media').classList.add('img-missing')">
+          </div>
+          <h3>백경첩</h3>
+          <p>내구성과 개폐감을 고려한 백경첩으로, 문과 가구 등에 폭넓게 사용됩니다.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="card-code">PROD-03</span>
+          <div class="card-media">
+            <img src="product-3.png" alt="스텐경첩" onerror="this.closest('.card-media').classList.add('img-missing')">
+          </div>
+          <h3>스텐경첩</h3>
+          <p>부식에 강한 스테인리스 소재로 제작해, 습기나 외부 환경에도 안정적입니다.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="card-code">PROD-04</span>
+          <div class="card-media">
+            <img src="product-4.png" alt="용접경첩" onerror="this.closest('.card-media').classList.add('img-missing')">
+          </div>
+          <h3>용접경첩</h3>
+          <p>철제 구조물과 산업 설비에 적합하도록 용접 방식으로 결합력을 강화했습니다.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-mark">JN</span>
+      <span class="logo-text">주남테크</span>
+      <p>정밀 경첩·철물 제조기업</p>
+    </div>
+    <div class="footer-col">
+      <h4>바로가기</h4>
+      <a href="#about">회사소개</a>
+      <a href="#services">제품군</a>
+    </div>
+    <div class="footer-col">
+      <h4>연락처</h4>
+      <p>대구광역시 북구 노원로17길 38-15</p>
+      <p>053-000-0000</p>
+      <p>wjy1814@naver.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 주남테크. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
